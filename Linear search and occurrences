@@ -1,13 +1,9 @@
 # if not sorted
-def search(elements, target):
-    index = -1
- 
-    for i, elem in enumerate(elements):
-        if elem == target:
-            index = i
-            break
- 
-    return index
+def search(numbers, target):
+    for i, e in enumerate(numbers):
+        if e == target:
+            return i
+    return -1
 
 # if sorted
 def search(elements, target):
@@ -53,3 +49,27 @@ numbers = [int(i) for i in input().split()]
 target = int(input())
 print(count(numbers, target))
 
+# first occurrence in sublist
+def search(numbers, target, a, b):
+    for i, n in enumerate(numbers[a:b]):
+        if n == target:
+            return i + a
+    return -1
+
+
+numbers = [int(i) for i in input().split()]
+target = int(input())
+a, b = (int(i) for i in input().split())
+print(search(numbers, target, a, b))
+
+# last occurrence
+def search(numbers, target):
+    last = -1
+    for i, e in enumerate(numbers):
+        if e == target:
+            last = i
+    return last
+
+numbers = [int(i) for i in input().split()]
+target = int(input())
+print(search(numbers, target))
