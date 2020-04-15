@@ -22,3 +22,21 @@ def search(elements, target):
             break
  
     return index
+
+# k-th occurrence
+def kth(numbers, target, k):
+    x = 0
+    for i, n in enumerate(numbers):
+        if n == target:
+            x += 1
+            if x == k:
+                return i
+    else:
+        return -1
+
+
+numbers = [int(i) for i in input().split()]
+target = int(input())
+k = int(input())
+print(kth(numbers, target, k))
+
