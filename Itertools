@@ -28,18 +28,14 @@ import itertools
 
 teams = ['Best-ever', 'Not-so-good', 'Amateurs']
 
-i = itertools.combinations(teams, 2)
-for _ in teams:
-    print(next(i))
+for i in itertools.combinations(teams, 2):
+    print(i)
 
-#all combinations of various length from list
+#all combinations of length <=3 from list
 import itertools
 
 flower_names = ['rose', 'tulip', 'sunflower']
 
 for n in range(3):
-    i = itertools.combinations(flower_names, n + 1)
-    for k in range(3):
-        if n == 2 and k == 1:
-            break
-        print(next(i))
+    for i in itertools.combinations(flower_names, n + 1):
+        print(i)
