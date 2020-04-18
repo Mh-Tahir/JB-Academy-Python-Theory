@@ -1,0 +1,12 @@
+# Write a program that reads a sequence of numbers from the first line and the number x from the second line. 
+#Then it should output all positions of x in the numerical sequence.
+n1 = input().split()
+n2 = input()
+n3 = []
+if n2 in n1:
+    for i, k in enumerate(n1):
+        if k == n2:
+            n3.append(str(i))
+    print(' '.join(n3))
+else:
+    print('not found')
