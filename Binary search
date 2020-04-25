@@ -62,10 +62,9 @@ def binary_search(elements, target, left, right):
  
     if elements[middle] == target:
         return middle
-    elif target < elements[middle]:
+    if target < elements[middle]:
         return binary_search(elements, target, middle + 1, right)
-    else:
-        return binary_search(elements, target, left, middle - 1)
+    return binary_search(elements, target, left, middle - 1)
 
 x = [int(x) for x in input().split()]
 y = int(input())
