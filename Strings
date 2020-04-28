@@ -41,3 +41,44 @@ print(contains(input(), input()))
 def contains(text, pattern):
     return text.rfind(pattern)
 print(contains(input(), input()))
+
+# Find hashtags and print them
+for n in input().split():
+    if n[0] == '#' and '#' not in n[1:]:
+        if n.endswith('...'):
+            print(n[1:-3])
+        elif n[-1] in '.,!?':
+            print(n[1:-1])
+        else:
+            print(n[1:])
+
+#Finding a submatrix in a matrix
+def contains2d(text, pattern):
+    t = len(text[0])
+    p = len(pattern[0])
+    for tn in range(len(text) - len(pattern) + 1):
+        found = True
+        for pn in range(len(pattern)):
+            row_found = None
+            for i in range(t - p + 1):
+                row_found = False
+                for j in range(p):
+                    if text[tn + pn][i + j] != pattern[pn][j]:
+                        break
+                else:
+                    row_found = True
+                if row_found:
+                    break
+            else:
+                found = row_found is True
+            if not found:
+                break
+        else:
+            return True
+    return False
+
+n, _ = list(map(int, input().split()))
+text = [input() for _ in range(n)]
+n, _ = list(map(int, input().split()))
+pattern = [input() for _ in range(n)]
+print(contains2d(text, pattern))
