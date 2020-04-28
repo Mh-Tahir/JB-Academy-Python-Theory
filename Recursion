@@ -6,3 +6,34 @@ def recursive_factorial(n):
         return 1
     else:
         return n * recursive_factorial(n-1)
+
+#Fibonacci
+fib(n):
+    if n < 2:
+        return n
+    return fib(n - 1) + fib(n - 2)
+
+#Fibonacci with memoization (top-down method)
+fib(n):
+    numbers = [-1] * (n + 1)
+    return fib_helper(n, numbers)
+ 
+fib_helper(n, numbers):
+    if numbers[n] != -1:
+        return numbers[n] 
+    if n < 2:
+        numbers[n] = n
+    else:
+        numbers[n] = fib_helper(n - 1, numbers) + fib_helper(n - 2, numbers)
+    return numbers[n]
+ 
+ #Fibonacci (bottom-up method)
+ fib_bottom_up(n):
+    if n < 2:
+        return n
+    numbers = [-1] * (n + 1)
+    numbers[0] = 0
+    numbers[1] = 1
+    for i in 0..(n - 1):
+        numbers[i + 2] = numbers[i + 1] + numbers[i]
+    return numbers[n]
