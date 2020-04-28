@@ -45,3 +45,9 @@ def list_sum(some_list):
     if len(some_list) == 1:
         return some_list[0]
     return list_sum(some_list[1:]) + some_list[0]
+
+#Recursive sum of first n natural numbers
+def rec_sum(n):
+    if n == 1:
+        return 1
+    return n + rec_sum(n - 1)
