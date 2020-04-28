@@ -37,3 +37,11 @@ fib_helper(n, numbers):
     for i in 0..(n - 1):
         numbers[i + 2] = numbers[i + 1] + numbers[i]
     return numbers[n]
+
+#Recursive sum of list elements
+def list_sum(some_list):
+    if some_list == []:
+        return 0
+    if len(some_list) == 1:
+        return some_list[0]
+    return list_sum(some_list[1:]) + some_list[0]
