@@ -10,3 +10,18 @@ if n2 in n1:
     print(' '.join(n3))
 else:
     print('not found')
+
+# Substring search
+def contains(text, pattern):
+    for i in range(len(text) - len(pattern)):
+        found = True
+ 
+        for j in range(len(pattern)):
+            if text[i + j] != pattern[j]:
+                found = False
+                break
+ 
+        if found:
+            return True
+ 
+    return False
