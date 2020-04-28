@@ -25,3 +25,19 @@ def contains(text, pattern):
             return True
  
     return False
+
+# The index of the last occurrence of substring (recursive version)
+def contains(text, pattern):
+    found = text.find(pattern)
+    if found == -1:
+        return found
+    if text[found + 1:].find(pattern) == -1:
+        return found
+    else:
+        return contains(text[found + 1:], pattern) + found + 1
+print(contains(input(), input()))
+
+# The index of the last occurrence of substring (rfind)
+def contains(text, pattern):
+    return text.rfind(pattern)
+print(contains(input(), input()))
