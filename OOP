@@ -16,3 +16,17 @@ if t.c ** 2 == t.a ** 2 + t.b ** 2:
     t.get_area()
 else:
     print('Not right')
+
+# Create student id
+class Student:
+
+    def __init__(self, name, last_name, birth_year):
+        self.name = name
+        self.last_name = last_name
+        self.birth_year = birth_year
+        self.id = self.name[0] + self.last_name + self.birth_year
+
+
+n, l, y = input(), input(), input()
+Dan = Student(n, l, y)
+print(Dan.id)
