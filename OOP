@@ -1,0 +1,18 @@
+# Right triangle area calculation
+class RightTriangle:
+    def __init__(self, hyp, leg_1, leg_2):
+        self.c = hyp
+        self.a = leg_1
+        self.b = leg_2
+
+
+    def get_area(self):
+        print(self.a * self.b / 2)
+
+
+c, a, b = input().split()
+t = RightTriangle(int(c), int(a), int(b))
+if t.c ** 2 == t.a ** 2 + t.b ** 2:
+    t.get_area()
+else:
+    print('Not right')
