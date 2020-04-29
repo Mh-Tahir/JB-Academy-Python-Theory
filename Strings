@@ -100,3 +100,11 @@ def find_apostrophe(word, start):
             return i
         else:  # the found apostrophe does not meet the conditions, we keep searching further
             return find_apostrophe(word, i + 1)
+
+#Identiy whether a text contains a substring equal to a pattern up to symbols permutation
+def contains_upto_permutations(text, pattern):
+    for i in pattern:
+        if text.count(i) < pattern.count(i):
+            return False
+    return True
+print(contains_upto_permutations(input(), input()))
