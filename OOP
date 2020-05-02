@@ -30,3 +30,10 @@ class Student:
 n, l, y = input(), input(), input()
 Dan = Student(n, l, y)
 print(Dan.id)
+
+#Sphere volume
+class Sphere:
+    PI = 3.1415
+    def __init__(self, radius):
+        self.radius = radius
+        self.volume = (self.radius ** 3) * self.PI * 4 / 3
