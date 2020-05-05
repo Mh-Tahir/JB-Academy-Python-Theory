@@ -53,3 +53,22 @@ class Ship:
 
 black_pearl = Ship("Black Pearl", 800, input())
 black_pearl.sail()
+
+# Stack class
+class Stack():
+
+    def __init__(self):
+        self.s = []
+
+    def push(self, el):
+        self.s.append(el)
+
+    def pop(self):
+        return self.s.pop()
+
+    def peek(self):
+        return self.s[-1]
+
+    def is_empty(self):
+        return self.s == []
+
