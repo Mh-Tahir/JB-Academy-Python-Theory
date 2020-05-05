@@ -82,3 +82,17 @@ class User:
         self.friends += n
         print("{} now has {} friends.".format(self.username, self.friends))
 
+# Bank deposit class
+class Bank:
+    def __init__(self, dollars, cents):
+        self.dollars = dollars
+        if cents < 100:
+            self.cents = cents
+        else:
+            self.cents = 0
+        self.deposit_dollars = 0
+        self.deposit_cents = 0
+
+    def add_money(self, deposit_dollars, deposit_cents):
+        self.deposit_dollars += self.dollars
+        self.deposit_cents += self.cents
