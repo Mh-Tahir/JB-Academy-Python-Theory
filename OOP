@@ -86,13 +86,13 @@ class User:
 class Bank:
     def __init__(self, dollars, cents):
         self.dollars = dollars
-        if cents < 100:
-            self.cents = cents
-        else:
-            self.cents = 0
-        self.deposit_dollars = 0
-        self.deposit_cents = 0
+        self.cents = cents
 
     def add_money(self, deposit_dollars, deposit_cents):
-        self.deposit_dollars += self.dollars
-        self.deposit_cents += self.cents
+        self.dollars += deposit_dollars
+        if self.cents + deposit_cents < 100:
+            self.cents += deposit_cents
+        else:
+            self.cents += deposit_cents
+            self.dollars += self.cents // 100
+            self.cents = self.cents % 100
