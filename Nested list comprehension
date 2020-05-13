@@ -24,3 +24,7 @@ n = int(input())
 b = [a[0] for a in [input().split() for x in range(n)] if a[1] == 'win']
 print(b)
 print(len(b))
+
+# Selects students with the grade A and prints their names in a list
+students = [["Will", "B"], ["Kate", "B"], ["Max", "A"], ["Elsa", "C"], ["Alex", "B"], ["Chris", "A"]]
+print([a[0] for a in students if a[1] == "A"])
