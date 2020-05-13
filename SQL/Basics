@@ -1,2 +1,15 @@
 // Extract all from Table
 SELECT * From Census;
+
+/* SQL query that defines a table "Census" with 5 columns: 
+"id" of type INTEGER, "name" of type VARCHAR(20), 
+"birth_place_latitude" of type REAL, 
+"year_income" of type DECIMAL(20,3), 
+and "is_male" of type BOOLEAN. */
+CREATE TABLE Census (
+    id INTEGER,
+    name VARCHAR(20),
+    birth_place_latitude REAL,
+    year_income DECIMAL(20,3),
+    is_male BOOLEAN
+);
