@@ -1,0 +1,2 @@
+// Extract all from Table
+SELECT * From Census;
