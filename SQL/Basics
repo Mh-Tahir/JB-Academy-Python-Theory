@@ -1,4 +1,4 @@
-// Extract all from Table
+/* Extract all from Table
 SELECT * From Census;
 
 /* SQL query that defines a table "Census" with 5 columns: 
@@ -13,3 +13,9 @@ CREATE TABLE Census (
     year_income DECIMAL(20,3),
     is_male BOOLEAN
 );
+
+/* Hello, World in SQL
+SELECT 'Hello, World!';
+
+/* Type casting
+SELECT CAST(256 AS DECIMAL(10, 2));
