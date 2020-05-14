@@ -1,0 +1,17 @@
+/* table customers with columns name (VARCHAR(20)), surname (VARCHAR(20)), zip_code (INT) and city (VARCHAR(10))
+/* new customer's name is Bobby, his surname is Ray, his ZIP code is 60601, and he lives in Chicago
+/* insert this information into the table
+INSERT INTO customers (name, surname, zip_code, city) VALUES ('Bobby', 'Ray', 60601, 'Chicago')
+
+/* if you know the exact order of the columns in the table
+INSERT INTO customers VALUES ('Bobby', 'Ray', 60601, 'Chicago')
+
+/* insert multiple rows
+INSERT INTO customers (name, surname, zip_code, city) VALUES ('Mary', 'West', 75201, 'Dallas'), 
+                                                             ('Steve', 'Palmer', 33107, 'Miami')
+
+/* Insert into specified columns
+INSERT INTO cats (name, age) VALUES ('Felix', 3)
+/* The owner column value for the first row will be NULL since we didn't specify it.
+
+/* 
