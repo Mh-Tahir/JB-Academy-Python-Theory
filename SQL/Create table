@@ -1,0 +1,5 @@
+CREATE TABLE animals (
+ name VARCHAR(10) NOT NULL,  
+ owner VARCHAR(20), 
+ age INT NOT NULL
+)
