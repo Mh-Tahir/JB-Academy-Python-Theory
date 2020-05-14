@@ -14,8 +14,16 @@ CREATE TABLE Census (
     is_male BOOLEAN
 );
 
-/* Hello, World in SQL
+/* Hello, World in SQL (an expression that we want to evaluate)
 SELECT 'Hello, World!';
 
 /* Type casting
 SELECT CAST(256 AS DECIMAL(10, 2));
+
+concat('Hyper', 'skill') /* returns 'Hyperskill'
+char_length('apple') /* equals 5
+reverse('Madam, I''m Adam') /* returns 'madA m''I ,madaM'
+replace('abracadabra', 'bra', '') /* returns 'acada'
+substr('Hello, data!', 8, 4) /* returns 'data'
+
+((true AND true) AND (NOT false)) OR false /* evaluated as true
