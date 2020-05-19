@@ -1,0 +1,4 @@
+import numpy as np
+
+def collect_info(array):
+    return "Shape: {}; dimensions: {}; length: {}; size: {}".format(array.shape, array.ndim, array.shape[0], array.size)
