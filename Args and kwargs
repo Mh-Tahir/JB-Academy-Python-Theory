@@ -17,3 +17,5 @@ def tracklist(**musicians):
         print(musician)
         for album, track in albums.items():
             print(f"ALBUM: {album} TRACK: {track}")
+
+# Fisher's Iris data set
