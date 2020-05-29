@@ -1,0 +1,16 @@
+import copy
+ 
+my_list = [[1], [2, 1]]
+list_copy = copy.deepcopy(my_list)
+
+# different id
+print(id(my_list[0]), id(list_copy[0]))
+
+# different id
+print(id(my_list), id(list_copy))
+
+# same id
+print(id(my_list[0][0]), id(list_copy[1][1]))
+
+# same id
+print(id(my_list[1][0]), id(list_copy[1][0]))
