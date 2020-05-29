@@ -38,3 +38,10 @@ my_copy = copy.deepcopy(lissst)
 
 # ids of lists differ, ids of its elements are same
 my_copy = [lissst[0], lissst[1], lissst[2]]
+
+
+# put a list inside itself
+empty_l = []
+empty_l.append(empty_l)
+print(empty_l)  # [[...]]
+print(empty_l.copy())  # [[[...]]]
