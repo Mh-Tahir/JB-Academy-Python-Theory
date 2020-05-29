@@ -14,3 +14,6 @@ print(id(my_list[0][0]), id(list_copy[1][1]))
 
 # same id
 print(id(my_list[1][0]), id(list_copy[1][0]))
+
+def my_copy(obj, copy_mode):
+    return copy.deepcopy(obj) if copy_mode == "deep copy" else copy.copy(obj)
