@@ -14,3 +14,11 @@
 </body>
 </head>
 </html>
+
+// CSS
+div{
+  width: 200px;
+  padding: 10px;
+  font-family: sans;
+  background-color: gold;
+}
