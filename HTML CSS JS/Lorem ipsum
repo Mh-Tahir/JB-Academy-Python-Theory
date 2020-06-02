@@ -5,6 +5,14 @@
 <title>
     A panagram
 </title>
+<style>
+div{
+  width: 200px;
+  padding: 10px;
+  font-family: sans;
+  background-color: gold;
+}
+</style>
 </head>
 <body>
 <div>
@@ -15,10 +23,3 @@
 </body>
 </html>
 
-<!-- CSS -->
-div{
-  width: 200px;
-  padding: 10px;
-  font-family: sans;
-  background-color: gold;
-}
