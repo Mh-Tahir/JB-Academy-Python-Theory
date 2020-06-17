@@ -108,3 +108,8 @@ def contains_upto_permutations(text, pattern):
             return False
     return True
 print(contains_upto_permutations(input(), input()))
+
+# Checking the validity of an email
+def check_email(string):
+    return " " not in string and "@" in string and (string.rfind(".")) > (string.find("@") + 1)
+
