@@ -1,2 +1,3 @@
-# JetBrains-Academy-Python
-JetBrains Academy Python Essentials
+# JetBrains Academy Python Essentials
+
+JetBrains Academy Python Theory Fundamentals
